@@ -1,0 +1,159 @@
+:root {
+  --linear-gradient: linear-gradient(#050a1d, #09153f);
+
+  /* Light Mode*/
+  --light-body-bg: #ebf4fd;
+  --gray-border: #dce0eb;
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-body-bg);
+  min-height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.7;
+}
+html {
+  font-size: 62.5%;
+}
+/* Global Styles */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+h3 {
+  font-size: 2.4rem;
+}
+p {
+  font-size: 1.4rem;
+}
+img {
+  width: 80%;
+  object-fit: cover;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  border: 2px solid var(--gray-border);
+  border-radius: 25px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.02);
+  background-color: var(--white);
+}
+.theme {
+  background-color: #eeeeef;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* Main Section */
+.section-header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-header nav ul {
+  display: flex;
+  gap: 10px;
+}
+.section-header nav ul li {
+  border: 1px solid var(--gray-border);
+  background-color: var(--white);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.section-header nav ul li.activeLink {
+  background-color: #c7231a;
+}
+.section-header nav ul li.activeLink a {
+  color: var(--white);
+}
+.section-header nav ul li a {
+  color: #434a5c;
+}
+
+/* Card Grids */
+.extension-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.extensions-card {
+  padding: 10px;
+  background-color: var(--white);
+  border: 2px solid var(--gray-border);
+  border-radius: 12px;
+}
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.card-top img {
+  width: 4rem;
+}
+.card-body h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1px;
+}
+.card-body p {
+  font-size: 1rem;
+  color: #333;
+}
+.card-bottom {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-bottom a {
+  font-size: 0.8rem;
+  color: #222;
+  border: 1px solid var(--gray-border);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.card-bottom .toggler {
+  position: relative;
+  width: 45px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 12px;
+  padding: 2px;
+  cursor: pointer;
+}
+.card-bottom .toggler.on {
+  background-color: #c7231a;
+}
+.card-bottom .toggle-circle {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: var(--white);
+  top: 2px;
+  transition: all 0.2s;
+}
+.card-bottom .toggle-circle.turned-on {
+  margin-left: 22px;
+}
