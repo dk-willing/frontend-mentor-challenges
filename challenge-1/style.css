@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.7;
+  transition: all 0.4s;
 }
 html {
   font-size: 62.5%;
@@ -41,9 +42,10 @@ img {
 }
 
 .container {
-  width: 70%;
+  width: 100%;
+  max-width: 84rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 5%;
 }
 /* Header */
 .header {
@@ -106,6 +108,7 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
+  margin-bottom: 20px;
 }
 .card-top img {
   width: 4rem;
@@ -124,6 +127,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 .card-bottom a {
   font-size: 0.8rem;
@@ -156,4 +160,24 @@ img {
 }
 .card-bottom .toggle-circle.turned-on {
   margin-left: 22px;
+}
+
+/* Media Query */
+@media (max-width: 44em) {
+  .extension-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 29em) {
+  .extension-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section-header h3 {
+    font-size: 2rem;
+  }
 }
